@@ -1,0 +1,7 @@
+**/node_modules/**
+web/node_modules/**
+package-lock**
+.idea/**
+applications/ms-os/.idea/**
+
+**.env**
