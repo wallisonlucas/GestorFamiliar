@@ -1,5 +1,3 @@
-import image from '@/'
-
 <template>
     <div class="container">
         <div class=" box">
@@ -10,9 +8,9 @@ import image from '@/'
                     </h1>
                 </div>
                 <div class="text2">
-                    <h3>
+                    <h2>
                         Bem-vindo ao GestorFamiliar
-                    </h3>
+                    </h2>
                 </div>
                 <div class="image">
                     <img src="/templates/finance-projeto1.png" alt="Imagem Projeto">
@@ -22,26 +20,42 @@ import image from '@/'
                         O GestorFamiliar é a solução completa para gestão financeira doméstica, desenvolvido para simplificar o controle de receitas, despesas e o planejamento do orçamento familiar.
                     </p>
                 </div>
+                    <Login />
             </div>
         </div>
     </div>
+
 </template>
 
-<style scoped>
+<script>
+import Login from './Login.vue';
+
+    export default {
+        name: 'Apresentacao',
+        components: {
+            Login
+        }
+    }
+</script>
+
+<style>
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: "Roboto", serif;
 }
 
 .container {
-    background-color: #E4E4E4;
+    background-color: #C8C5C9;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 98vh;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
 }
 
 .box {
@@ -50,6 +64,7 @@ import image from '@/'
     box-shadow: 10px 10px 35px rgba(0, 0, 0, 0.50), 0 9px 10px rgba(0, 0, 0, 0);
     width: 944px;
     height: 600px;
+    position: relative;
 }
 
 .box-color {
@@ -61,7 +76,6 @@ import image from '@/'
 
 .text1 {
     /* border: solid 2px greenyellow; */
-    font-family: "Roboto", serif;
     font-size: 17px;
     padding-top: 81px;
     display: flex;
@@ -69,8 +83,7 @@ import image from '@/'
 }
 
 .text2 {
-    font-family: "Roboto", serif;
-    font-size: 13px;
+    font-size: 11px;
     margin-top: 15px;
     display: flex;
     justify-content: center;
@@ -87,7 +100,7 @@ import image from '@/'
 
 .text3 {
     font-family: "Roboto", serif;
-    font-size: 14px;
+    font-size: 15px;
     width: 321px;
     height: 56px;
     margin: auto;
@@ -96,4 +109,16 @@ import image from '@/'
     justify-content: center;
     text-align: justify;
 }
+
+@media screen and (max-widt: 1330px) {
+    .image {
+        display: none;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+}
+
 </style>
