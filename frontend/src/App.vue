@@ -1,15 +1,20 @@
-<script setup>
-import Apresentacao from './components/Apresentacao.vue';
-
-
-</script>
 
 <template>
-
-  <Apresentacao />
+  <div>
+    <Apresentacao />
+  </div>
   
 </template>
 
-<style scoped>
+<script>
+  import Apresentacao from './components/Apresentacao.vue';
+  import Login from './components/Login.vue';
 
-</style>
+  export default {
+    name: 'App',
+    components: {
+      Apresentacao,
+      Login
+    }
+  }      
+</script>
